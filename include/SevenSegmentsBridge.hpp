@@ -15,8 +15,8 @@
 // You should have received a copy of the GNU General Public License along 
 // with 'SevenSegments-by-sporniket'. If not, see <https://www.gnu.org/licenses/>. 
 
-#ifndef SEVEN_SEGMENTS_IIC_BRIDGE_HPP
-#define SEVEN_SEGMENTS_IIC_BRIDGE_HPP
+#ifndef SEVEN_SEGMENTS_BRIDGE_HPP
+#define SEVEN_SEGMENTS_BRIDGE_HPP
 
 // standard includes
 #include <cstdint>
@@ -26,25 +26,25 @@
 // project includes
 #include "SevenSegmentsTypes.hpp"
 
-/** @brief An I2C device will be designated by an ID, platform-specific implementation will have to deal with it. */
-using IicDeviceId = uint8_t ;
+/** @brief An bridge will be designated by an ID, platform-specific implementation will have to deal with it. */
+using BridgeId = uint8_t ;
 
-/** @brief model of status after some I2C operation took place, to wrap a platform-specific value type. */
+/** @brief model of status after some operation took place, to wrap a platform-specific value type. */
 template <typename ReturnCode> 
-struct IicStatus {
+struct BridgeStatus {
     bool ok ;
     ReturnCode errorCode;
 } ; 
 
-/** @brief Model of a 7 segment display module addressable through an I2C link.
+/** @brief A bridge interface (I2C, SPI, a set of GPIOs,...) will allow to drive a 7 segment display module.
  */
 template <typename ReturnCode> 
-class SevenSegmentsIicBridge {
+class SevenSegmentsBridge {
     private:
 
     public:
-        virtual ~SevenSegmentsIicBridge() {} ;
-        virtual IicStatus<ReturnCode> upload(SevenSegmentsRegisters *registers, IicDeviceId recipient) = 0 ;
+        virtual ~SevenSegmentsBridge() {} ;
+        virtual BridgeStatus<ReturnCode> upload(SevenSegmentsRegisters *registers, BridgeId recipient) = 0 ;
 } ;
 
 #endif

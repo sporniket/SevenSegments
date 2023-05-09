@@ -9,6 +9,10 @@ GPL v3
 
 ## What's new
 
+### v0.0.2
+
+* A bridge is not limited to I2C, remove any mention of a specific protocol in the type names.
+
 ### v0.0.1
 
 Initial publishing, extracted from working code.

@@ -26,7 +26,7 @@
 // project includes
 #include "SevenSegmentsTypes.hpp"
 #include "SevenSegmentsFont.hpp"
-#include "SevenSegmentsIicBridge.hpp"
+#include "SevenSegmentsBridge.hpp"
 //write code here
 
 #endif
