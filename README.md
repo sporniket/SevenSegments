@@ -1,4 +1,4 @@
-# AnimatedValues
+# SevenSegments
 C++ library for PlatformIO, an abstract model to interface with a display made of 7-segment digits.
 
 [![PlatformIO Registry](https://badges.registry.platformio.org/packages/sporniket/library/SevenSegments-by-sporniket.svg)](https://registry.platformio.org/libraries/sporniket/SevenSegments-by-sporniket)
