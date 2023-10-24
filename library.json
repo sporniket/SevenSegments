@@ -1,8 +1,8 @@
 {
     "name": "SevenSegments-by-sporniket",
-    "version": "0.0.2",
-    "description": "C++ library for PlatformIO, an abstract model to interface with a display made of 7-segments digits.",
-    "keywords": "Seven segments, font",
+    "version": "0.0.3",
+    "description": "C++ library for PlatformIO, an abstract model to interface with a display made of 7-segments digits, and a builtin US-ASCII font.",
+    "keywords": "Seven segments, font, ASCII",
     "repository": {
         "type": "git",
         "url": "https://github.com/sporniket/SevenSegments"
